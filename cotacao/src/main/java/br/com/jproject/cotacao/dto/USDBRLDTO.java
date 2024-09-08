@@ -3,12 +3,12 @@ package br.com.jproject.cotacao.dto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.extern.jackson.Jacksonized;
+import lombok.NoArgsConstructor;
 
-@Jacksonized
-@Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class USDBRLDTO {
 
     public String code;

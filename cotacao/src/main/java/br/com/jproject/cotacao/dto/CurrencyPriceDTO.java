@@ -1,16 +1,19 @@
 package br.com.jproject.cotacao.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import lombok.extern.jackson.Jacksonized;
+import lombok.NoArgsConstructor;
 
-@Jacksonized
+@NoArgsConstructor
 @Data
-@Builder
-@AllArgsConstructor
 public class CurrencyPriceDTO {
 
-    private USDBRLDTO usdbrldto;
+    private USDBRLDTO USDBRL;
+
+    @JsonCreator
+    public CurrencyPriceDTO(@JsonProperty("USDBRL") USDBRLDTO USDBRL) {
+        this.USDBRL = USDBRL;
+    }
 
 }

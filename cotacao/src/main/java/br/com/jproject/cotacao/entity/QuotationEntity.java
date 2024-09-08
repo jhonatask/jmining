@@ -18,7 +18,7 @@ public class QuotationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date date;
-    @Column(name = "currency_price")
+    @Column(name = "currency_price", precision = 10, scale = 4)
     private BigDecimal currencyPrice;
     @Column(name = "pct_change")
     private String pctChange;
